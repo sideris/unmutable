@@ -23,4 +23,4 @@ module.exports = function unmutable (o) {
 	Object.freeze(mew)
 
 	return mew;
-};
+}
