@@ -11,5 +11,3 @@ function testNumbers() {
 }
 
 testNumbers()
-
-

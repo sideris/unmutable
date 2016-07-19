@@ -1,8 +1,6 @@
-let deepFreeze = require('deep-freeze')
-
 module.exports = function unmutable (o) {
-	let mew = {val: o};
-	deepFreeze(o)
+	let mew = {val: o}
+	Object.freeze(o)
 
 	mew.p = (val)		=> mew.val + val
 	mew.m = (val)		=> mew.val - val
@@ -13,6 +11,7 @@ module.exports = function unmutable (o) {
 	mew.ass = (obj)		=> mew = unmutable(obj)
 	mew.ref = ()		=> mew.val
 	// TODO list operations
+	// TODO methods only for each type?
 
 	Object.getOwnPropertyNames(o).forEach(function (prop) {
 		if (o[prop] !== null) {
@@ -22,5 +21,5 @@ module.exports = function unmutable (o) {
 	});
 	Object.freeze(mew)
 
-	return mew;
+	return mew
 }
