@@ -1,0 +1,22 @@
+{
+  "name": "unmutable",
+  "version": "1.0.0",
+  "description": "Couldn't sleep; so I decided to end the debate immutable / mutable. Introducing unmutable. A library aim at the emptiness of space",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sideris/unmutable.git"
+  },
+  "author": "Petros G. Sideris",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sideris/unmutable/issues"
+  },
+  "dependencies": {
+    "deep-freeze": "0.0.1"
+  },
+  "homepage": "https://github.com/sideris/unmutable#readme"
+}
