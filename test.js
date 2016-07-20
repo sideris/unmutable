@@ -7,7 +7,7 @@ function testNumberOps() {
 	let two = one.p(1);
 	expect(um(two).powa(2)).toEqual(4);
 	expect(one.m(1)).toEqual(0)
-	expect( one.ass({a:1}).ref() ).toEqual({a:1})
+	// expect( one.set({a:1}).ref() ).toEqual({a:1})
 	console.log('TEST:--- numbers passed')
 }
 
@@ -25,5 +25,14 @@ function testArrayOps() {
 	console.log('TEST:--- arrays passed')
 }
 
+function testObjectAssignment() {
+	let obj = {a:1, b: {c:1}}
+	let umObj = um(obj)
+	var q = umObj.a.set({a: 12})
+	console.log(q)
+	// console.log(umObj)
+}
+
 testNumberOps()
 testArrayOps()
+testObjectAssignment()

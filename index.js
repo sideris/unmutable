@@ -8,7 +8,7 @@ module.exports = function unmutable (o) {
 	mew.mul = (val)		=> mew.val * val
 	mew.div = (val)		=> mew.val / val
 	mew.powa = (val)	=> Math.pow(mew.val, val)
-	mew.ass = (obj)		=> mew = unmutable(obj)
+	mew.set = (obj)		=> mew = unmutable(obj)
 	mew.ref = ()		=> mew.val
 	mew.spliced = (ind = 0, nelems = 0, ...elems) =>[
 														...mew.val.slice(0, ind),
@@ -19,8 +19,8 @@ module.exports = function unmutable (o) {
 	mew.pop = () => mew.val[mew.val.length - 1]
 
 
-	// TODO list operations
 	// TODO methods only for each type?
+	// TODO fix set. Need to return a new object with only the affected property changed
 
 	Object.getOwnPropertyNames(o).forEach(function (prop) {
 		if (o[prop] !== null) {
