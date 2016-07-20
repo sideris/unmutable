@@ -10,6 +10,15 @@ module.exports = function unmutable (o) {
 	mew.powa = (val)	=> Math.pow(mew.val, val)
 	mew.ass = (obj)		=> mew = unmutable(obj)
 	mew.ref = ()		=> mew.val
+	mew.spliced = (ind = 0, nelems = 0, ...elems) =>[
+														...mew.val.slice(0, ind),
+														...elems,
+														...mew.val.slice(ind + nelems, mew.val.length)
+													]
+	mew.push = (...elems) => [...mew.val, ...elems]
+	mew.pop = () => mew.val[mew.val.length - 1]
+
+
 	// TODO list operations
 	// TODO methods only for each type?
 
