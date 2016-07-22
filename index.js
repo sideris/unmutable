@@ -20,8 +20,11 @@ module.exports = function unmutable (o) {
 
 
 	// TODO methods only for each type?
-	// TODO fix set. Need to return a new object with only the affected property changed
-
+	/* TODO fix set. Need to return a new object with only the affected property changed
+	 	Maybe wrap the functionality to a function to be returned and have something like
+	 	 let a = mut(obj)
+	 	 a.set(prop, value) // returns a new object with the value as set
+	 */
 	Object.getOwnPropertyNames(o).forEach(function (prop) {
 		if (o[prop] !== null) {
 			mew[prop] = unmutable(o[prop])
