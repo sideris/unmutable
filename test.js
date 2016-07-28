@@ -28,14 +28,10 @@ function testArrayOps() {
 function testObjectAssignment() {
 	let obj = {a:1, b: {c:1}}
 	let umObj = um(obj)
-	var q = umObj.a.set({a: 12})
-	console.log(q)
-	// console.log(umObj)
+	let newObj = umObj.set('a', 4)
+	expect(newObj.a, 4)
 }
 
-// testNumberOps()
-// testArrayOps()
-// testObjectAssignment()
-let obj = {a: 1, b: {c:2}}
-let a = um(obj)
-console.log(a.set('a', 4))
+testNumberOps()
+testArrayOps()
+testObjectAsssignment()
