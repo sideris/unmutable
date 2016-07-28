@@ -34,4 +34,4 @@ function testObjectAssignment() {
 
 testNumberOps()
 testArrayOps()
-testObjectAsssignment()
+testObjectAssignment()
