@@ -33,6 +33,9 @@ function testObjectAssignment() {
 	// console.log(umObj)
 }
 
-testNumberOps()
-testArrayOps()
-testObjectAssignment()
+// testNumberOps()
+// testArrayOps()
+// testObjectAssignment()
+let obj = {a: 1, b: {c:2}}
+let a = um(obj)
+console.log(a.set('a', 4))
