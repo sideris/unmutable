@@ -1,2 +1,3 @@
 # unmutable
-Couldn't sleep; so I decided to end the debate immutable / mutable. Introducing unmutable! Don't let it drive you crazy. 
+
+A small library that makes an object immutable and provides a decorator to do operations on it
