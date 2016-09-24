@@ -30,8 +30,21 @@ function testObjectAssignment() {
 	let umObj = um(obj)
 	let newObj = umObj.set('a', 4)
 	expect(newObj.a, 4)
+	console.log('TEST:--- Object assignment passed')
+}
+
+function testImmutability() {
+	let obj = {a: 1, b: {c: 2}}
+	obj.a = 3
+	expect(obj.a, 1)
+	obj.b = 3
+	expect(obj.b, {c: 2})
+	obj.b.c = 3 	// test recursive
+	expect(obj.b.c, 2)	
+	console.log('TEST:--- Object immutability passed')	
 }
 
 testNumberOps()
 testArrayOps()
 testObjectAssignment()
+testImmutability()
